@@ -1,4 +1,3 @@
-/*
  :root {
     --primary-color: #6366f1;
     --primary-hover: #4f46e5;
@@ -95,25 +94,6 @@ header p {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-.header-avatar-container {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    animation: avatarEntrance 1s ease-out 0.5s both;
-}
-
-.avatar-small {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: white;
-    padding: 5px;
-}
-
-.float-animation {
-    animation: float 3s ease-in-out infinite;
 }
 
 .avatar-wrapper {
@@ -246,4 +226,3 @@ footer {
     color: var(--text-color);
     font-size: 1rem;
 }
-*/
