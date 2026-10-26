@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Webora Tec Task 4</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-content">
+            <a href="#" class="logo">Anu Kumari Hajam</a>
+            <nav class="main-nav">
+                <a href="#">Home</a>
+                <a href="#">Portfolio</a>
+                <a href="#" class="active">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Form Section -->
+    <main class="form-section">
+        <div class="container form-container">
+            <h1>Get In Touch</h1>
+            <p class="form-subtitle">Have a project in mind? Fill out the form below and I'll respond within 24 hours.</p>
+            
+            <form id="contactForm" novalidate>
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" placeholder="Your full name" required>
+                    <span class="error-message" id="nameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                    <span class="error-message" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                    <span class="error-message" id="messageError"></span>
+                </div>
+
+                <button type="submit" class="btn-primary">Send Message</button>
+                <div id="successMessage" class="success-message" hidden>
+                    ✅ Thank you! Your message has been sent successfully. I'll be in touch soon.
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <p> anuth@gmail.com</p>
+                <p> +977 9711111111</p>
+                <p> Kathmandu, Nepal</p>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <div class="social-links">
+                    <a href="https://github.com/Anu-Thakur01" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/anukumarihajam/" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Anu Kumari Hajam | Webora Tec Internship Task 4</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
