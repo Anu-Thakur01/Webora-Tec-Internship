@@ -1,54 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anu Kumari Hajam | Aspiring UI/UX Designer</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anu Kumari Hajam | Web Developer &amp; UI/UX Designer</title>
+  <meta name="description" content="Portfolio of Anu Kumari Hajam, BCA student, web developer, .NET developer and aspiring UI/UX designer from Kathmandu, Nepal.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Anu Kumari Hajam</h1>
-        <p>BCA Student | Aspiring UI/UX Designer | Figma & Web Development</p>
-    </header>
 
-    <main>
-        <section id="about" class="card">
-            <div class="avatar-wrapper pulse-animation">
-                <img src="assets/12.png" alt="Anu Kumari Hajam Profile" class="profile-img">
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#home" class="logo">Anu<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="home">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="hello">Hi, I'm</p>
+          <h1>Anu Kumari Hajam</h1>
+          <p class="role">BCA Student &bull; Web Developer &bull; Aspiring UI/UX Designer</p>
+          <p class="intro">
+            I design clean, responsive interfaces in Figma and bring them to life with
+            PHP, MySQL, JavaScript and ASP.NET Core. I care about colour, spacing and
+            clear hierarchy, so what I build is easy to look at and easy to use.
+          </p>
+          <div class="hero-buttons">
+            <a href="#skills" class="btn btn-primary">See my skills</a>
+            <a href="#contact" class="btn btn-ghost">Get in touch</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="avatar-card">
+            <div class="photo-wrap">
+              <img class="photo" src="assets/11.jpeg" alt="Photo of Anu Kumari Hajam">
+              <div class="avatar-badge" role="img" aria-label="Avatar with the initials AK">AK</div>
             </div>
-            <h2>About Me</h2>
-            <p class="about-text">Hello! I'm a motivated BCA student based in Kathmandu, with a strong passion for UI/UX design and web development. I have hands-on experience creating wireframes and prototypes in Figma, along with practical development skills in HTML, CSS, JavaScript, and PHP. I love turning complex problems into clean, user-centered digital experiences and am eager to contribute to real-world projects.</p>
-        </section>
+            <p class="avatar-name">Anu Kumari Hajam</p>
+            <p class="avatar-place">Kathmandu, Nepal</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <section id="skills" class="card">
-            <h2>Skills</h2>
-            <div class="skills-list">
-                <span class="skill-tag">UI/UX Design</span>
-                <span class="skill-tag">Figma</span>
-                <span class="skill-tag">Wireframing & Prototyping</span>
-                <span class="skill-tag">HTML5 & CSS3</span>
-                <span class="skill-tag">JavaScript</span>
-                <span class="skill-tag">PHP & MySQL</span>
-                <span class="skill-tag">Adobe Photoshop</span>
-            </div>
-        </section>
+    <!-- ===== About ===== -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section-title">About me</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              I'm a Bachelor of Computer Application student in Kathmandu with a
+              foundation in web development and .NET, and a growing focus on UI/UX design.
+              I like starting in Figma with wireframes and prototypes, then building the
+              real thing in code.
+            </p>
+            <p>
+              Through my academic projects I've designed and built responsive, user-centred
+              interfaces, and I'm eager to work with designers and developers on digital
+              experiences that matter.
+            </p>
+            <p class="languages"><strong>Languages:</strong> Nepali, English, Hindi, Bhojpuri, Maithili</p>
+          </div>
 
-        <section id="contact" class="card">
-            <h2>Contact</h2>
-            <p> Kathmandu, Nepal</p>
-            <p> <a href="mailto:anuth@gmail.com">anuth@gmail.com</a></p>
-            <p> <a href="tel:9711111111">9711111111</a></p>
-            <div class="social-links">
-                <a href="https://github.com/Anu-Thakur01" target="_blank">GitHub</a> • 
-                <a href="https://www.linkedin.com/in/anukumarihajam/" target="_blank">LinkedIn</a>
-            </div>
-        </section>
-    </main>
+          <div class="about-cards">
+            <article class="info-card">
+              <h3>Education</h3>
+              <ul>
+                <li><strong>BCA</strong>, Saraswati Multiple Campus, Thamel <span>2023 - Present</span></li>
+                <li><strong>+2 Science</strong>, Siddartha Vanasthali Institute</li>
+                <li><strong>SEE</strong>, AVM Secondary School</li>
+              </ul>
+            </article>
+            <article class="info-card">
+              <h3>How I work</h3>
+              <ul>
+                <li>Problem solving</li>
+                <li>Teamwork and clear communication</li>
+                <li>Attention to detail and consistency</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2026 Anu Kumari Hajam. Built for Webora Tec Internship.</p>
-    </footer>
+    <!-- ===== Skills ===== -->
+    <section class="section section-tint" id="skills">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid">
+
+          <article class="skill-card">
+            <h3>Development</h3>
+            <ul class="tags">
+              <li>HTML</li><li>CSS</li><li>Bootstrap</li><li>JavaScript</li>
+              <li>PHP</li><li>C#</li><li>Java</li><li>C</li>
+            </ul>
+          </article>
+
+          <article class="skill-card skill-card-accent">
+            <h3>UI/UX design</h3>
+            <ul class="tags">
+              <li>Figma</li><li>Auto Layout</li><li>Components and variants</li>
+              <li>Wireframing</li><li>Prototyping</li><li>User flows</li>
+              <li>Typography</li><li>Colour theory</li><li>Glassmorphism</li>
+            </ul>
+          </article>
+
+          <article class="skill-card">
+            <h3>Tools</h3>
+            <ul class="tags">
+              <li>VS Code</li><li>Visual Studio</li><li>Git and GitHub</li>
+              <li>WordPress</li><li>Photoshop</li><li>Illustrator</li><li>CapCut</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="section contact" id="contact">
+      <div class="container contact-box">
+        <h2>Let's build something together</h2>
+        <p>I'm open to internships and collaborations. Send me a message or find me online.</p>
+
+        <ul class="contact-list">
+          <li>
+            <span class="contact-label">Email</span>
+            <a href="mailto:youremail@example.com">youremail@example.com</a>
+          </li>
+          <li>
+            <span class="contact-label">GitHub</span>
+            <a href="https://github.com/your-username" target="_blank" rel="noopener">github.com/your-username</a>
+          </li>
+          <li>
+            <span class="contact-label">LinkedIn</span>
+            <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener">linkedin.com/in/your-profile</a>
+          </li>
+          <li>
+            <span class="contact-label">Location</span>
+            <span>Kathmandu, Nepal</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Anu Kumari Hajam. All rights reserved.</p>
+    </div>
+  </footer>
+
 </body>
 </html>
