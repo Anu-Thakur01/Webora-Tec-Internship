@@ -41,7 +41,7 @@ a:focus-visible, .btn:focus-visible {
 
 /* ===== Header ===== */
 .site-header {
-  position: sticky;
+  position: relative;
   top: 0;
   z-index: 10;
   background: rgba(247, 246, 252, 0.8);
