@@ -1,80 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Webora Tec Task 4</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Anu Kumari Hajam</title>
+  <meta name="description" content="A contact page with a styled form and JavaScript validation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="site-header">
-        <div class="container header-content">
-            <a href="#" class="logo">Anu Kumari Hajam</a>
-            <nav class="main-nav">
-                <a href="#">Home</a>
-                <a href="#">Portfolio</a>
-                <a href="#" class="active">Contact</a>
-            </nav>
-        </div>
-    </header>
 
-    <!-- Main Form Section -->
-    <main class="form-section">
-        <div class="container form-container">
-            <h1>Get In Touch</h1>
-            <p class="form-subtitle">Have a project in mind? Fill out the form below and I'll respond within 24 hours.</p>
-            
-            <form id="contactForm" novalidate>
-                <div class="form-group">
-                    <label for="name">Full Name *</label>
-                    <input type="text" id="name" name="name" placeholder="Your full name" required>
-                    <span class="error-message" id="nameError"></span>
-                </div>
+  <main class="page">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
 
-                <div class="form-group">
-                    <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="email" placeholder="you@example.com" required>
-                    <span class="error-message" id="emailError"></span>
-                </div>
+    <div class="container layout">
 
-                <div class="form-group">
-                    <label for="message">Message *</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
-                    <span class="error-message" id="messageError"></span>
-                </div>
+      <!-- Left: info -->
+      <section class="info">
+        <a href="#" class="logo">Anu<span>.</span></a>
+        <h1>Let's talk</h1>
+        <p>
+          Have a question, an idea or a project in mind? Fill in the form and
+          I will get back to you as soon as I can.
+        </p>
+        <ul class="info-list">
+          <li><span>Email</span> youremail@example.com</li>
+          <li><span>Location</span> Kathmandu, Nepal</li>
+          <li><span>Reply time</span> Within one or two days</li>
+        </ul>
+      </section>
 
-                <button type="submit" class="btn-primary">Send Message</button>
-                <div id="successMessage" class="success-message" hidden>
-                    ✅ Thank you! Your message has been sent successfully. I'll be in touch soon.
-                </div>
-            </form>
-        </div>
-    </main>
+      <!-- Right: form -->
+      <section class="form-card" aria-labelledby="form-title">
+        <h2 id="form-title">Send a message</h2>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="container footer-content">
-            <div class="footer-col">
-                <h4>Contact Info</h4>
-                <p> anuth@gmail.com</p>
-                <p> +977 9711111111</p>
-                <p> Kathmandu, Nepal</p>
-            </div>
-            <div class="footer-col">
-                <h4>Connect</h4>
-                <div class="social-links">
-                    <a href="https://github.com/Anu-Thakur01" target="_blank">GitHub</a>
-                    <a href="https://www.linkedin.com/in/anukumarihajam/" target="_blank">LinkedIn</a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Anu Kumari Hajam | Webora Tec Internship Task 4</p>
-        </div>
-    </footer>
+        <form id="contactForm" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" autocomplete="name" required>
+            <p class="error" id="nameError" role="alert"></p>
+          </div>
 
-    <script src="script.js"></script>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+            <p class="error" id="emailError" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message here" required></textarea>
+            <p class="error" id="messageError" role="alert"></p>
+          </div>
+
+          <button type="submit" class="btn">Send message</button>
+        </form>
+
+        <p class="success" id="successMsg" role="status" hidden></p>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>

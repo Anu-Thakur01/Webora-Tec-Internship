@@ -1,55 +1,61 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('contactForm');
-    const nameInput = document.getElementById('name');
-    const emailInput = document.getElementById('email');
-    const messageInput = document.getElementById('message');
-    const successMessage = document.getElementById('successMessage');
+// Contact form validation (no backend needed)
+const form = document.getElementById("contactForm");
+const successMsg = document.getElementById("successMsg");
 
-    // Validation rules
-    const validators = {
-        name: (value) => value.trim().length >= 2 ? '' : 'Name must be at least 2 characters long.',
-        email: (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value) ? '' : 'Please enter a valid email address.',
-        message: (value) => value.trim().length >= 10 ? '' : 'Message must be at least 10 characters long.'
-    };
+const fields = {
+  name: {
+    input: document.getElementById("name"),
+    error: document.getElementById("nameError"),
+    check: (v) => (v.length < 2 ? "Please enter your name." : ""),
+  },
+  email: {
+    input: document.getElementById("email"),
+    error: document.getElementById("emailError"),
+    check: (v) => {
+      if (!v) return "Please enter your email.";
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) ? "" : "Enter a valid email like name@example.com.";
+    },
+  },
+  message: {
+    input: document.getElementById("message"),
+    error: document.getElementById("messageError"),
+    check: (v) => (v.length < 10 ? "Please write at least 10 characters." : ""),
+  },
+};
 
-    // Real-time validation on input
-    [nameInput, emailInput, messageInput].forEach(input => {
-        input.addEventListener('input', () => validateField(input));
-        input.addEventListener('blur', () => validateField(input));
-    });
+// Check one field, show or clear its error, return true if valid
+function validateField(field) {
+  const message = field.check(field.input.value.trim());
+  field.error.textContent = message;
+  field.input.classList.toggle("invalid", message !== "");
+  field.input.setAttribute("aria-invalid", message !== "");
+  return message === "";
+}
 
-    function validateField(input) {
-        const fieldName = input.name;
-        const errorSpan = document.getElementById(`${fieldName}Error`);
-        const errorMsg = validators[fieldName](input.value);
-        
-        if (errorMsg) {
-            input.classList.add('invalid');
-            errorSpan.textContent = errorMsg;
-            return false;
-        } else {
-            input.classList.remove('invalid');
-            errorSpan.textContent = '';
-            return true;
-        }
-    }
+// Re-check a field while the user fixes it
+Object.values(fields).forEach((field) => {
+  field.input.addEventListener("input", () => {
+    successMsg.hidden = true;
+    if (field.input.classList.contains("invalid")) validateField(field);
+  });
+  field.input.addEventListener("blur", () => validateField(field));
+});
 
-    // Form submission handler
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        const isNameValid = validateField(nameInput);
-        const isEmailValid = validateField(emailInput);
-        const isMessageValid = validateField(messageInput);
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
 
-        if (isNameValid && isEmailValid && isMessageValid) {
-            successMessage.hidden = false;
-            form.reset();
-            
-            // Hide success message after 5 seconds
-            setTimeout(() => {
-                successMessage.hidden = true;
-            }, 5000);
-        }
-    });
+  const results = Object.values(fields).map(validateField);
+  const allValid = results.every(Boolean);
+
+  if (!allValid) {
+    // Move focus to the first field with an error
+    Object.values(fields).find((f) => f.input.classList.contains("invalid")).input.focus();
+    successMsg.hidden = true;
+    return;
+  }
+
+  const firstName = fields.name.input.value.trim().split(" ")[0];
+  successMsg.textContent = `Thank you, ${firstName}! Your message has been sent.`;
+  successMsg.hidden = false;
+  form.reset();
 });
