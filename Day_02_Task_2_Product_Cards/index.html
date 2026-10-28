@@ -1,72 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Cards | Webora Tec Task 2</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bloomify | Fresh Flower Bouquets</title>
+  <meta name="description" content="A product cards page showing six flower bouquets with price and description.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <header>
-        <h1>Premium Design & Dev Resources</h1>
-        <p>Level up your workflow with our top-tier digital products.</p>
-    </header>
 
-    <main class="container">
-        <div class="cards-grid">
-            <!-- Product Card 1 -->
-            <div class="product-card">
-                <div class="card-image">
-                    <!-- FIXED: Removed leading slash from src -->
-                    <img src="assets/pro_figma_kit.png" alt="Figma UI Kit">
-                </div>
-                <div class="card-content">
-                    <h3>Pro Figma UI Kit</h3>
-                    <p class="description">A comprehensive, fully responsive UI kit with over 200+ components for your
-                        next web project.</p>
-                    <div class="price">Rs. 2,500</div>
-                    <button class="btn-primary">View Details</button>
-                </div>
-            </div>
+  <header class="page-header">
+    <div class="container">
+      <a href="#" class="logo">Bloomify<span>.</span></a>
+      <h1>Fresh bouquets for every occasion</h1>
+      <p>Hand-picked flowers, wrapped with care. Choose your favourite and we will deliver it fresh.</p>
+    </div>
+  </header>
 
-            <!-- Product Card 2 -->
-            <div class="product-card">
-                <div class="card-image">
-                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&auto=format&fit=crop&q=60"
-                        alt="Web Dev Course">
-                </div>
-                <div class="card-content">
-                    <h3>Full-Stack Web Bootcamp</h3>
-                    <p class="description">Master HTML, CSS, JavaScript, and Node.js with 40+ hours of hands-on video
-                        tutorials.</p>
-                    <div class="price">Rs. 4,999</div>
-                    <button class="btn-primary">View Details</button>
-                </div>
-            </div>
+  <main class="container">
+    <section class="cards" aria-label="Products">
 
-            <!-- Product Card 3 -->
-            <div class="product-card">
-                <div class="card-image">
-                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=500&auto=format&fit=crop&q=60"
-                        alt="Cloud Hosting">
-                </div>
-                <div class="card-content">
-                    <h3>Premium Cloud Hosting</h3>
-                    <p class="description">Lightning-fast, secure, and scalable cloud hosting with 24/7 developer
-                        support.</p>
-                    <div class="price">Rs. 999 / month</div>
-                    <button class="btn-primary">View Details</button>
-                </div>
-            </div>
+      <article class="card">
+        <div class="card-img"><img src="assets/rose-romance.jpeg" alt="Red rose bouquet"></div>
+        <div class="card-body">
+          <h2>Rose Romance</h2>
+          <p>A classic bunch of red roses for birthdays, anniversaries and love notes.</p>
+          <div class="card-foot">
+            <span class="price">Rs. 1,499</span>
+            <button class="btn" type="button">Add to cart</button>
+          </div>
         </div>
-    </main>
+      </article>
 
-    <footer>
-        <p>&copy; 2026 Anu Kumari Hajam | Webora Tec</p>
-    </footer>
+      <article class="card">
+        <div class="card-img"><img src="assets/sunny-sunflowers.jpg" alt="Sunflower bouquet"></div>
+        <div class="card-body">
+          <h2>Sunny Sunflowers</h2>
+          <p>Bright, cheerful sunflowers that bring instant sunshine to any room.</p>
+          <div class="card-foot">
+            <span class="price">Rs. 999</span>
+            <button class="btn" type="button">Add to cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-img"><img src="assets/lavender-dream.jpg" alt="Lavender bouquet"></div>
+        <div class="card-body">
+          <h2>Lavender Dream</h2>
+          <p>Soft purple lavender with a calming scent, perfect for a quiet thank you.</p>
+          <div class="card-foot">
+            <span class="price">Rs. 1,199</span>
+            <button class="btn" type="button">Add to cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-img"><img src="assets/pink-peony.jpg" alt="Pink peony bouquet"></div>
+        <div class="card-body">
+          <h2>Pink Peony</h2>
+          <p>Full, fluffy peonies in blush pink. A gentle gift for someone special.</p>
+          <div class="card-foot">
+            <span class="price">Rs. 1,799</span>
+            <button class="btn" type="button">Add to cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-img"><img src="assets/tulip-delight.jpg" alt="Tulip bouquet"></div>
+        <div class="card-body">
+          <h2>Tulip Delight</h2>
+          <p>Fresh spring tulips in a simple wrap, ideal for a small, happy surprise.</p>
+          <div class="card-foot">
+            <span class="price">Rs. 1,099</span>
+            <button class="btn" type="button">Add to cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-img"><img src="assets/white-orchid.jpg" alt="White orchid arrangement"></div>
+        <div class="card-body">
+          <h2>White Orchid</h2>
+          <p>An elegant orchid arrangement that stays beautiful for weeks.</p>
+          <div class="card-foot">
+            <span class="price">Rs. 2,299</span>
+            <button class="btn" type="button">Add to cart</button>
+          </div>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Anu Kumari Hajam. All rights reserved.</p>
+  </footer>
+
 </body>
-
 </html>
